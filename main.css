@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    border: 1px black solid;
+    width: 50%;
+    max-width: 430px;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+.paragraph {
+    font-family: "Pepsi Cyr-Lat";
+    color: powderblue;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.display {
+    min-height: 150px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: black;
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .input {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    margin-right: 8px;
+}
+
+.display .output {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.keys {
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    grid-template-rows: repeat(7, 2fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key {
+    position: relative;
+    cursor: pointer;
+
+    display: block;
+    height: 0;
+    padding-top: 50%;
+    background-color: powderblue;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.keys .key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.keys .key:hover {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.num {
+    font-size: 25px;
+}
+
+.keys .pro {
+    background-color: gainsboro;
+    font-size: 15px;
+}
